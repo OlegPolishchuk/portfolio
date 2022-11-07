@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { DotGroup, Navbar } from 'components';
 import { Page } from 'enums';
 import { useMediaQuery } from 'hooks/useMediaQuery/useMediaQuery';
+import { Landing } from 'pages';
 import { ReturnComponentType } from 'types';
 
 const App = (): ReturnComponentType => {
@@ -32,6 +33,7 @@ const App = (): ReturnComponentType => {
         {isAboveMediumScreens && (
           <DotGroup selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
         )}
+        <Landing setSelectedPage={setSelectedPage} />
       </div>
     </div>
   );
