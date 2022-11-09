@@ -6,6 +6,9 @@ import { LineGradient, Skill } from 'components';
 import { SkillDiagramHeight, SkillsData } from 'globalConstants';
 import { useMediaQuery } from 'hooks/useMediaQuery/useMediaQuery';
 import { ReturnComponentType } from 'types';
+import { countSizeToPixels } from 'utils';
+
+const startAnimationDuration = 0.2;
 
 export const MySkills = (): ReturnComponentType => {
   const [width, setWidth] = useState(0);
@@ -65,27 +68,50 @@ export const MySkills = (): ReturnComponentType => {
                 <div className="mb-[88px]">Geek</div>
                 <div className="mb-[88px]">Newbie</div>
               </li>
-              {SkillsData.map(skill => (
-                <li key={skill.id}>
-                  <Skill
-                    level={skill.level}
-                    title={skill.title}
-                    height={SkillDiagramHeight}
-                    gradient={skill.gradient}
-                  />
-                </li>
+              {SkillsData.map((skill, index) => (
+                <motion.div
+                  key={skill.id}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{ duration: startAnimationDuration * index }}
+                  variants={{
+                    // hidden: { opacity: 0, x: -50 },
+                    // visible: { opacity: 1, x: 0 },
+                    hidden: { height: '0' },
+                    visible: {
+                      height: countSizeToPixels(SkillDiagramHeight, skill.level),
+                    },
+                  }}
+                >
+                  <li key={skill.id}>
+                    <Skill
+                      level={skill.level}
+                      title={skill.title}
+                      height={SkillDiagramHeight}
+                      gradient={skill.gradient}
+                    />
+                  </li>
+                </motion.div>
               ))}
             </ul>
           </div>
         ) : (
           <div ref={skillBlockRef} className="mt-16">
-            {SkillsData.map(skill => (
-              <Skill
+            {SkillsData.map((skill, index) => (
+              <motion.div
                 key={skill.id}
-                level={skill.level}
-                title={skill.title}
-                width={width}
-              />
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: startAnimationDuration * index }}
+                variants={{
+                  hidden: { opacity: 0, x: -50 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+              >
+                <Skill level={skill.level} title={skill.title} width={width} />
+              </motion.div>
             ))}
           </div>
         )}
