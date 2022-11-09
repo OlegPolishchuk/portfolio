@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
-import { DotGroup, Navbar } from 'components';
+import { DotGroup, LineGradient, Navbar } from 'components';
 import { Page } from 'enums';
 import { useMediaQuery } from 'hooks/useMediaQuery/useMediaQuery';
-import { Landing } from 'pages';
+import { Landing, MySkills } from 'pages';
 import { ReturnComponentType } from 'types';
 
 const App = (): ReturnComponentType => {
@@ -29,11 +29,15 @@ const App = (): ReturnComponentType => {
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
-      <div className="w-5/6 mx-auto md:h-full">
+      <div className="w-5/6 mx-auto h-full">
         {isAboveMediumScreens && (
           <DotGroup selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
         )}
         <Landing setSelectedPage={setSelectedPage} />
+      </div>
+      <LineGradient />
+      <div className="w-5/6 mx-auto md:h-full">
+        <MySkills />
       </div>
     </div>
   );

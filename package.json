@@ -19,6 +19,7 @@
     "react-icons": "^4.6.0",
     "react-scripts": "5.0.1",
     "tailwindcss": "^3.2.2",
+    "tailwindcss-percentage-width": "^1.0.3",
     "typescript": "*",
     "web-vitals": "^2.1.0"
   },
