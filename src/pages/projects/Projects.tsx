@@ -19,9 +19,9 @@ const container = {
 
 export const Projects = (): ReturnComponentType => {
   return (
-    <section id={Page.PROJECTS} className="pt-48 pb-48">
+    <section id={Page.PROJECTS} className="pt-10 pb-10">
       <motion.div
-        className="md:w-2/4 mx-auto text-center mb-10"
+        className="md:w-2/4 mx-auto text-center mb-10 mt-20"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}

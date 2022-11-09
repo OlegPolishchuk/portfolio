@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { DotGroup, LineGradient, Navbar } from 'components';
 import { Page } from 'enums';
 import { useMediaQuery } from 'hooks/useMediaQuery/useMediaQuery';
-import { Landing, MySkills, Projects } from 'pages';
+import { Contacts, Footer, Landing, MySkills, Projects } from 'pages';
 import { ReturnComponentType } from 'types';
 
 const App = (): ReturnComponentType => {
@@ -42,9 +42,15 @@ const App = (): ReturnComponentType => {
         <MySkills />
       </div>
 
-      <div className="w-5/6 mx-auto">
+      <div className="w-5/6 mx-auto min-h-full">
         <Projects />
       </div>
+
+      <div className="w-5/6 mx-auto min-h-full">
+        <Contacts />
+      </div>
+
+      <Footer />
     </div>
   );
 };
