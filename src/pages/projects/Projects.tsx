@@ -56,24 +56,32 @@ export const Projects = (): ReturnComponentType => {
             USER INTERFACES
           </div>
 
-          <Project title="News" description="News app" imgSrc={newsProjectImg} />
+          <Project
+            title="News"
+            imgSrc={newsProjectImg}
+            appLink="https://news-app-delta-six.vercel.app"
+            githubLink="https://github.com/OlegPolishchuk/news-app"
+          />
 
           <Project
             title="Weather app"
-            description="Weather app"
             imgSrc={weatherProjectImg}
+            appLink="https://weather-app-one-azure.vercel.app"
+            githubLink="https://github.com/OlegPolishchuk/weather-app"
           />
 
           <Project
             title="Countries"
-            description="Countries app"
             imgSrc={countriesProjectImg}
+            appLink="https://countries-app-opal-phi.vercel.app"
+            githubLink="https://github.com/OlegPolishchuk/countriesApp"
           />
 
           <Project
             title="Admin dashboard"
-            description="Admin dashboard app"
             imgSrc={adminDashboardProjectImg}
+            appLink="https://admin-dashboard-iota-one.vercel.app"
+            githubLink="https://github.com/OlegPolishchuk/admin-dashboard"
           />
 
           <div

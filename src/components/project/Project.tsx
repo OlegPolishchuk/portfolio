@@ -11,21 +11,48 @@ const projectVariant = {
 
 interface Props {
   title: string;
-  description: string;
+  githubLink: string;
+  appLink: string;
   imgSrc: string;
 }
 
-export const Project = ({ title, description, imgSrc }: Props): ReturnComponentType => {
+export const Project = ({
+  title,
+  imgSrc,
+  githubLink,
+  appLink,
+}: Props): ReturnComponentType => {
   const overlayStyles =
     'absolute h-full w-full opacity-0 hover:opacity-90 transition ' +
-    'duration-500 bg-grey z-30 flex flex-col justify-center items-center tet-center p-16 ' +
-    'text-deep-blue cursor-pointer';
+    'duration-500 bg-grey z-30 flex flex-col justify-center items-center text-center p-16 ' +
+    'text-deep-blue cursor-pointer font-bold';
 
   return (
     <motion.div variants={projectVariant} className="relative">
       <div className={overlayStyles}>
         <p className="text-2xl font-playfair">{title}</p>
-        <p className="mt-7">{description}</p>
+        <div className="mt-10">
+          <p>
+            <a
+              className="text-red hover:text-yellow transition duration-200"
+              href={appLink}
+              target="_blank"
+              rel="noreferrer"
+            >
+              App link
+            </a>
+          </p>
+          <p>
+            <a
+              className="text-red hover:text-yellow transition duration-200"
+              href={githubLink}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Github link
+            </a>
+          </p>
+        </div>
       </div>
 
       <img
