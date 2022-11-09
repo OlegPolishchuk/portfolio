@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { DotGroup, LineGradient, Navbar } from 'components';
 import { Page } from 'enums';
 import { useMediaQuery } from 'hooks/useMediaQuery/useMediaQuery';
-import { Landing, MySkills } from 'pages';
+import { Landing, MySkills, Projects } from 'pages';
 import { ReturnComponentType } from 'types';
 
 const App = (): ReturnComponentType => {
@@ -29,6 +29,7 @@ const App = (): ReturnComponentType => {
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
+
       <div className="w-5/6 mx-auto h-full">
         {isAboveMediumScreens && (
           <DotGroup selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
@@ -36,8 +37,13 @@ const App = (): ReturnComponentType => {
         <Landing setSelectedPage={setSelectedPage} />
       </div>
       <LineGradient />
+
       <div className="w-5/6 mx-auto min-h-full">
         <MySkills />
+      </div>
+
+      <div className="w-5/6 mx-auto">
+        <Projects />
       </div>
     </div>
   );

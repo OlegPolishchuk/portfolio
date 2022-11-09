@@ -79,8 +79,9 @@ export const MySkills = (): ReturnComponentType => {
                   variants={{
                     // hidden: { opacity: 0, x: -50 },
                     // visible: { opacity: 1, x: 0 },
-                    hidden: { height: '0' },
+                    hidden: { opacity: 0, height: '0' },
                     visible: {
+                      opacity: 1,
                       height: countSizeToPixels(SkillDiagramHeight, skill.level),
                     },
                   }}
