@@ -33,7 +33,7 @@ export const DotGroup = ({
           selectedPage === Page.SKILLS ? selectStyles : 'bg-dark-grey'
         } w-3 h-3 rounded-full`}
         href={`#${Page.SKILLS}`}
-        onClick={() => setSelectedPage(Page.HOME)}
+        onClick={() => setSelectedPage(Page.SKILLS)}
       />
 
       <AnchorLink
@@ -41,7 +41,7 @@ export const DotGroup = ({
           selectedPage === Page.PROJECTS ? selectStyles : 'bg-dark-grey'
         } w-3 h-3 rounded-full`}
         href={`#${Page.PROJECTS}`}
-        onClick={() => setSelectedPage(Page.HOME)}
+        onClick={() => setSelectedPage(Page.PROJECTS)}
       />
 
       <AnchorLink
@@ -49,7 +49,7 @@ export const DotGroup = ({
           selectedPage === Page.Contact ? selectStyles : 'bg-dark-grey'
         } w-3 h-3 rounded-full`}
         href={`#${Page.Contact}`}
-        onClick={() => setSelectedPage(Page.HOME)}
+        onClick={() => setSelectedPage(Page.Contact)}
       />
     </div>
   );

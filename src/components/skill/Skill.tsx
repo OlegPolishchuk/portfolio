@@ -40,8 +40,8 @@ export const Skill = ({
             backgroundColor: '#ccc',
           }}
         >
-          <p>{title}</p>
-          <p>{level}%</p>
+          <p className="text-xl">{title}</p>
+          <p className="text-xl">{level}%</p>
         </div>
       ) : (
         <div className="mb-10" style={widthStyle}>

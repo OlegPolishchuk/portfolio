@@ -3,6 +3,7 @@ import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
 import { LineGradient, Skill } from 'components';
+import { Page } from 'enums';
 import { SkillDiagramHeight, SkillsData } from 'globalConstants';
 import { useMediaQuery } from 'hooks/useMediaQuery/useMediaQuery';
 import { ReturnComponentType } from 'types';
@@ -40,8 +41,8 @@ export const MySkills = (): ReturnComponentType => {
   }, []);
 
   return (
-    <section id="skills" className="pt-10 pb-24">
-      <div>
+    <section id={Page.SKILLS} className="pt-10 pb-24">
+      <div className="mt-20">
         <motion.div
           className="md:w-1/3"
           initial="hidden"
