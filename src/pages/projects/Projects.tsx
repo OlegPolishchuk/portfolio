@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 
 import adminDashboardProjectImg from 'assets/admin-dashboard.png';
 import countriesProjectImg from 'assets/countries-app.png';
+import itransitionImg from 'assets/itransition.png';
 import newsProjectImg from 'assets/news-app.png';
 import weatherProjectImg from 'assets/weather-app.png';
 import { LineGradient, Project } from 'components';
@@ -55,6 +56,13 @@ export const Projects = (): ReturnComponentType => {
           >
             USER INTERFACES
           </div>
+
+          <Project
+            title="Itransition project"
+            imgSrc={itransitionImg}
+            appLink="https://itransition-final-project-front.vercel.app"
+            githubLink="https://github.com/OlegPolishchuk/itransition-final-project_front"
+          />
 
           <Project
             title="News"

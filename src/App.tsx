@@ -9,6 +9,7 @@ import { ReturnComponentType } from 'types';
 const App = (): ReturnComponentType => {
   const [selectedPage, setSelectedPage] = useState(Page.HOME);
   const [isTopOfPage, setIsTopOfPage] = useState(true);
+
   const isAboveMediumScreens = useMediaQuery('(min-width: 1060px)');
 
   useEffect(() => {
