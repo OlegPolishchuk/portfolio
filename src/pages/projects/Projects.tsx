@@ -6,6 +6,7 @@ import adminDashboardProjectImg from 'assets/admin-dashboard.png';
 import countriesProjectImg from 'assets/countries-app.png';
 import itransitionImg from 'assets/itransition.png';
 import newsProjectImg from 'assets/news-app.png';
+import nikeProjectImg from 'assets/nike-app.png';
 import weatherProjectImg from 'assets/weather-app.png';
 import { LineGradient, Project } from 'components';
 import { Page } from 'enums';
@@ -58,10 +59,10 @@ export const Projects = (): ReturnComponentType => {
           </div>
 
           <Project
-            title="Itransition project"
-            imgSrc={itransitionImg}
-            appLink="https://itransition-final-project-front.vercel.app"
-            githubLink="https://github.com/OlegPolishchuk/itransition-final-project_front"
+            title="Nike"
+            imgSrc={nikeProjectImg}
+            appLink="https://nike-shop-one.vercel.app"
+            githubLink="https://github.com/OlegPolishchuk/nike-shop"
           />
 
           <Project
@@ -69,6 +70,13 @@ export const Projects = (): ReturnComponentType => {
             imgSrc={newsProjectImg}
             appLink="https://news-app-delta-six.vercel.app"
             githubLink="https://github.com/OlegPolishchuk/news-app"
+          />
+
+          <Project
+            title="Itransition project"
+            imgSrc={itransitionImg}
+            appLink="https://itransition-final-project-front.vercel.app"
+            githubLink="https://github.com/OlegPolishchuk/itransition-final-project_front"
           />
 
           <Project
